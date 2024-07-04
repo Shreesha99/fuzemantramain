@@ -1284,6 +1284,7 @@ section {
 }
 
 .team .member .pic {
+  height: 35rem;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -1355,112 +1356,85 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
+.pricing .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
 }
 
-.pricing h3 {
-  font-weight: 400;
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #777777;
-  background: #f8f8f8;
+.pricing .table th,
+.pricing .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
 }
 
-.pricing h4 {
-  font-size: 36px;
-  color: #1acc8d;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #444444;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing ul li {
-  padding-bottom: 16px;
-}
-
-.pricing ul i {
-  color: #1acc8d;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  padding: 20px 15px;
-  background: #f8f8f8;
+.pricing .table th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
   text-align: center;
 }
 
-.pricing .btn-buy {
+.pricing .table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  text-align: center;
+}
+
+.pricing .table tbody+tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.pricing .table .btn-wrap {
+  text-align: center;
+  margin: 0;
+}
+
+.pricing .table .btn-buy {
   background: #1acc8d;
-  display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 50px;
   color: #fff;
-  transition: none;
+  transition: background-color 0.3s;
   font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
 }
 
-.pricing .btn-buy:hover {
-  background: #149f6e;
+.pricing .table .btn-buy:hover {
+  background-color: #149f6e;
 }
 
-.pricing .featured h3 {
-  color: #fff;
-  background: #1acc8d;
+.pricing .table tbody td {
+  text-align: center;
 }
 
-.pricing .advanced {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background: #1acc8d;
-  color: #fff;
+.pricing .table tbody td:first-child {
+  text-align: center;
+  font-weight: 600;
 }
+
+.pricing .table tbody td i {
+  color: #1acc8d;
+  font-size: 18px;
+}
+
+.pricing .table tbody td i.bi-x {
+  color: #ccc;
+}
+
+.pricing .table tbody td a.btn-buy {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+
+.pricing .table-responsive {
+  overflow-x: auto;
+}
+
 
 /*--------------------------------------------------------------
 # F.A.Q
