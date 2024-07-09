@@ -7,6 +7,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const contactRoutes = require('./routes/contactRoutes');
 const subscriptionRoutes = require('./routes/subscriptionRoutes');
+const cors = require('cors'); // Import cors package
 require('dotenv').config();
 
 const app = express();
@@ -15,9 +16,21 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Allow requests from droplear.com
+const allowedOrigins = ['http://localhost:5000','http://droplear.com', 'https://droplear.com'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
+
 app.use(express.static(path.join(__dirname, '../')));
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
