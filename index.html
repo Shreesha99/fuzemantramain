@@ -32,7 +32,7 @@
   <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="db9f31f3-b953-49c1-a89d-f6d51a596fd3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
@@ -735,6 +735,35 @@
         messageDiv.style.color = 'red';
       }
     });
+  </script>
+  <script>
+    document.addEventListener('keydown', function(event) {
+    // F12
+    if (event.key === "F12") {
+        event.preventDefault();
+    }
+
+    // Ctrl + Shift + I
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+        event.preventDefault();
+    }
+
+    // Ctrl + Shift + J
+    if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+        event.preventDefault();
+    }
+
+    // Ctrl + U
+    if (event.ctrlKey && event.key === 'U') {
+        event.preventDefault();
+    }
+
+    // Ctrl + Shift + C (Inspect Element)
+    if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+        event.preventDefault();
+    }
+});
+
   </script>
 
 
