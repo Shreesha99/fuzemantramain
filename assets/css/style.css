@@ -152,8 +152,8 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(1, 4, 136, 0.9);
-  height: 60px;
+  background: rgba(1, 4, 136, 1);
+  height: 80px;
 }
 
 #header .logo h1 {
@@ -168,6 +168,13 @@ h6 {
   margin-bottom: 5px;
 }
 
+#header .logo .pipe {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
 #header .logo h1 a,
 #header .logo h1 a:hover {
   color: #fff;
@@ -177,7 +184,7 @@ h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 60px;
+  max-height: 70px;
 }
 
 /*--------------------------------------------------------------
