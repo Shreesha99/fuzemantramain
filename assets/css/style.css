@@ -1352,10 +1352,13 @@ section {
   height: 35rem;
   border-radius: 4px;
   overflow: hidden;
+
 }
 
 .team .member img {
   transition: all ease-in-out 0.4s;
+  height: 60vh;
+  object-fit: cover;
 }
 
 .team .member:hover img {
